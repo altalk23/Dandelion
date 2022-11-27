@@ -21,8 +21,8 @@ jobs:
         config:
         - name: "Windows"
           bin_folder: "windows"
-          os: windows-2019
-          extra_flags: '-G "Visual Studio 16 2019" -T host=x64 -A win32'
+          os: windows-2022
+          extra_flags: '-T host=x64 -A win32'
           out_paths:  './build/Release/*.dll'
           platform_suffix: 'win'
           
@@ -58,7 +58,7 @@ jobs:
         mkdir bin
         mkdir bin/nightly
         cd bin/nightly
-        curl -L https://github.com/geode-sdk/geode/releases/download/$GEODE_VERSION/geode-$GEODE_VERSION-${{ matrix.config.platform_suffix }}.zip -o geode-sdk.zip
+        curl -L https://github.com/geode-sdk/geode/releases/download/${{ env.GEODE_VERSION }}/geode-${{ env.GEODE_VERSION }}-${{ matrix.config.platform_suffix }}.zip -o geode-sdk.zip
         tar -xf geode-sdk.zip
     - name: Configure CMake
       run: |
@@ -89,7 +89,7 @@ jobs:
       
       - name: Download and Unzip CLI
         run: |
-          curl -L https://github.com/geode-sdk/cli/releases/download/$CLI_VERSION/geode-cli-$CLI_VERSION-win.zip -o geode-cli.zip
+          curl -L https://github.com/geode-sdk/cli/releases/download/${{ env.CLI_VERSION }}/geode-cli-${{ env.cLI_VERSION }}-win.zip -o geode-cli.zip
           tar -xf geode-cli.zip
       - uses: actions/download-artifact@v3
         with:
@@ -105,9 +105,9 @@ jobs:
       - name: Merge
         shell: bash
         run: |
-          mv $MOD_NAME.dll $MOD_ID.dll
-          mv lib$MOD_NAME.dylib $MOD_ID.dylib
-          ./geode.exe package new . --binary $MOD_ID.dll --binary $MOD_ID.dylib --output $MOD_NAME.geode
+          mv ${{ env.MOD_NAME }}.dll ${{ env.MOD_ID }}.dll
+          mv lib${{ env.MOD_NAME }}.dylib ${{ env.MOD_ID }}.dylib
+          ./geode.exe package new . --binary ${{ env.MOD_ID }}.dll --binary ${{ env.MOD_ID }}.dylib --output ${{ env.MOD_NAME }}.geode
          
       - uses: actions/upload-artifact@v3
         with:
