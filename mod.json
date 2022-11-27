@@ -1,0 +1,36 @@
+{
+	"geode": "v0.6.0",
+	"version": "v2.0.0",
+	"id": "alk.dandelion",
+	"name": "Dandelion",
+	"developer": "alk",
+	"description": "Small customizable additions for enhancing the Geometry Dash experience.",
+	"dependencies": [],
+	"resources": {
+		"spritesheets": {
+			"FlagSheet": [
+				"resources/flags/*.png"
+			]
+		}
+	},
+	"settings": {
+		"practice-song-hack": {
+			"type": "bool",
+			"name": "Practice Song Hack",
+			"description": "Uses the song of the level instead of the default practice song.",
+			"default": true
+		},
+		"fps-overlay": {
+			"type": "bool",
+			"name": "FPS Overlay",
+			"description": "Displays the physics FPS at the top left corner.",
+			"default": true
+		},
+		"player-flags": {
+			"type": "bool",
+			"name": "Player Flags",
+			"description": "Randomly adds pride flags to the icons in the chat.",
+			"default": false
+		}
+	}
+}

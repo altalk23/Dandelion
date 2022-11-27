@@ -1,0 +1,168 @@
+{
+	"build_systems":
+	[
+		
+		{
+			"file_regex": "(.+[^:]):(\\d+):(\\d+): (?:fatal )?((?:error|warning): .+)$",
+			"name": "Dandelion (OSX)",
+			"shell_cmd": "make -j4",
+			"syntax": "Packages/CMakeBuilder/Syntax/Make.sublime-syntax",
+			"variants":
+			[
+				{
+					"name": "clean",
+					"shell_cmd": "make -j4 clean",
+				},
+				{
+					"name": "rebuild_cache",
+					"shell_cmd": "make -j4 rebuild_cache",
+				},
+				{
+					"name": "CodegenProject",
+					"shell_cmd": "make -j4 CodegenProject",
+				},
+				{
+					"name": "CodegenRun",
+					"shell_cmd": "make -j4 CodegenRun",
+				},
+				{
+					"name": "Dandelion_PACKAGE",
+					"shell_cmd": "make -j4 Dandelion_PACKAGE",
+				},
+				{
+					"name": "Dandelion",
+					"shell_cmd": "make -j4 Dandelion",
+				},
+				{
+					"name": "fmt",
+					"shell_cmd": "make -j4 fmt",
+				},
+				{
+					"name": "Users/Shared/Geode/sdk/entry.o",
+					"shell_cmd": "make -j4 Users/Shared/Geode/sdk/entry.o",
+				},
+				{
+					"name": "Users/Shared/Geode/sdk/entry.i",
+					"shell_cmd": "make -j4 Users/Shared/Geode/sdk/entry.i",
+				},
+				{
+					"name": "Users/Shared/Geode/sdk/entry.s",
+					"shell_cmd": "make -j4 Users/Shared/Geode/sdk/entry.s",
+				},
+				{
+					"name": "cmake_pch.hxx.pch",
+					"shell_cmd": "make -j4 cmake_pch.hxx.pch",
+				},
+				{
+					"name": "cmake_pch.hxx.i",
+					"shell_cmd": "make -j4 cmake_pch.hxx.i",
+				},
+				{
+					"name": "cmake_pch.hxx.s",
+					"shell_cmd": "make -j4 cmake_pch.hxx.s",
+				},
+				{
+					"name": "geode/codegenned/Geode/GeneratedSource.o",
+					"shell_cmd": "make -j4 geode/codegenned/Geode/GeneratedSource.o",
+				},
+				{
+					"name": "geode/codegenned/Geode/GeneratedSource.i",
+					"shell_cmd": "make -j4 geode/codegenned/Geode/GeneratedSource.i",
+				},
+				{
+					"name": "geode/codegenned/Geode/GeneratedSource.s",
+					"shell_cmd": "make -j4 geode/codegenned/Geode/GeneratedSource.s",
+				},
+				{
+					"name": "src/Fixes.o",
+					"shell_cmd": "make -j4 src/Fixes.o",
+				},
+				{
+					"name": "src/Fixes.i",
+					"shell_cmd": "make -j4 src/Fixes.i",
+				},
+				{
+					"name": "src/Fixes.s",
+					"shell_cmd": "make -j4 src/Fixes.s",
+				},
+				{
+					"name": "src/Main.o",
+					"shell_cmd": "make -j4 src/Main.o",
+				},
+				{
+					"name": "src/Main.i",
+					"shell_cmd": "make -j4 src/Main.i",
+				},
+				{
+					"name": "src/Main.s",
+					"shell_cmd": "make -j4 src/Main.s",
+				},
+				{
+					"name": "src/Modifications.o",
+					"shell_cmd": "make -j4 src/Modifications.o",
+				},
+				{
+					"name": "src/Modifications.i",
+					"shell_cmd": "make -j4 src/Modifications.i",
+				},
+				{
+					"name": "src/Modifications.s",
+					"shell_cmd": "make -j4 src/Modifications.s",
+				},
+				{
+					"name": "src/Optimizations.o",
+					"shell_cmd": "make -j4 src/Optimizations.o",
+				},
+				{
+					"name": "src/Optimizations.i",
+					"shell_cmd": "make -j4 src/Optimizations.i",
+				},
+				{
+					"name": "src/Optimizations.s",
+					"shell_cmd": "make -j4 src/Optimizations.s",
+				},
+				{
+					"name": "src/modifications/FPSOverlay.o",
+					"shell_cmd": "make -j4 src/modifications/FPSOverlay.o",
+				},
+				{
+					"name": "src/modifications/FPSOverlay.i",
+					"shell_cmd": "make -j4 src/modifications/FPSOverlay.i",
+				},
+				{
+					"name": "src/modifications/FPSOverlay.s",
+					"shell_cmd": "make -j4 src/modifications/FPSOverlay.s",
+				},
+				{
+					"name": "src/modifications/PlayerFlags.o",
+					"shell_cmd": "make -j4 src/modifications/PlayerFlags.o"
+				},
+				{
+					"name": "src/modifications/PlayerFlags.i",
+					"shell_cmd": "make -j4 src/modifications/PlayerFlags.i"
+				},
+				{
+					"name": "src/modifications/PlayerFlags.s",
+					"shell_cmd": "make -j4 src/modifications/PlayerFlags.s"
+				},
+			],
+			"working_dir": "${project_path}/build",
+		},
+	],
+	"folders":
+	[
+		{
+			"path": ".",
+		},
+	],
+	"settings":
+	{
+		"ClangFormat": {
+			"format_on_save": true,
+		},
+		"cmake":
+		{
+			"build_folder": "${project_path}/build",
+		},
+	},
+}
