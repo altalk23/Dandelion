@@ -145,7 +145,7 @@ $execute {
 		});
 	});
 
-	listenForSettingChanges<BoolSetting>("fps-overlay", [](auto setting) {
-		FPSOverlay::get()->setVisible(setting->getValue());
-	});
+	// listenForSettingChanges<BoolSetting>("fps-overlay", [](auto setting) {
+	// 	FPSOverlay::get()->setVisible(setting->getValue());
+	// });
 }
